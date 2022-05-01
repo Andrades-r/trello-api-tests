@@ -1,0 +1,5 @@
+{
+    "testFiles": "**/*.spec.js",
+    "baseUrl":"https://api.trello.com/1",
+    "video":false
+}
