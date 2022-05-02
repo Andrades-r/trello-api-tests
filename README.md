@@ -1,11 +1,13 @@
 # trello-api-tests
-Cenários de testes da API do Trello e Testes automatizados de Criação e autenticação utilizando Cypress e Javascript.
+
+Cenários de testes da API do Trello estão no arquivo CenariosTestes.pdf na raíz do projeto.
+Foram implementados Testes automatizados utilizando Cypress e Javascript.
 As funcionalidades que foram automatizadas foram as seguintes:
 - Autenticação*;
 - Criação de cards.
 
 
-# Requisitos
+# Requisitos para execução dos testes Automatizados
  - Node, recomenda-se versão superior a 12.
  - Npx ou Cypress instalado.
 
@@ -14,8 +16,8 @@ As funcionalidades que foram automatizadas foram as seguintes:
 
 - Crie o seu arquivo .env na raíz do projeto seguindo o .env.exemplo
 - Na raíz do projeto execute `npm i`
-- Em seguida para abrir o Cypress Runner execute o comando `npx cypress open`
-- Se preferir executar os testes direto pelo terminal, execute `npx cypress run`
+- Em seguida para abrir o Cypress Runner execute o comando `npx cypress open` ou `npm run cypress:open`
+- Se preferir executar os testes direto pelo terminal, execute `npx cypress run` ou `npm run cypress:run`
 
 # Rodando com Docker
 
