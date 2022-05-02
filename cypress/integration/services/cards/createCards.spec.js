@@ -13,10 +13,9 @@ import {URL_CARD, URL_LIST} from '../../const/urls';
 const WRONG_TOKEN = '123123';
 const WRONG_KEY = '123123';
 const WRONG_LIST = '123123';
-const ID_MEMBER = '626d799f72a29a8f839553f9';
 
-//TO RUN TESTs IN YOUR CARDS LIST CHANGE THIS TO YOUR CARD LIST ID
-const TARGET_LIST = '626d79f97f0620763077b9dc';
+const ID_MEMBER = Cypress.env('USER_ID');
+const TARGET_LIST = Cypress.env('CARD_LIST');
 
 const BASIC_CARD = {
   idList: TARGET_LIST,
@@ -35,7 +34,7 @@ function validateFailedResponse(response, expectedStatusCode, expectedMessage) {
 
 function clearCardList(idList) {
   const getListUrl = `${URL_LIST}/${idList}/cards?key=${BASIC_CARD.key}&token=${BASIC_CARD.token}`;
-  cy.log("Clearing the card list before tests");
+  cy.log("Clearing the card list before running tests");
   cy.getRequest(getListUrl).then(response=>{
     response.body.forEach(card =>{
       const cardUrl = `${URL_CARD}/${card.id}?key=${BASIC_CARD.key}&token=${BASIC_CARD.token}`;

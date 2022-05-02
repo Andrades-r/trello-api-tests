@@ -2,8 +2,7 @@ import { INVALID_KEY, INVALID_TOKEN } from '../../const/messages';
 import { SUCCESS, CLIENT_ERRO } from '../../../status/statusCode';
 import { URL_MEMBER } from '../../const/urls';
 
-// TO TEST USING ANOTHER USER CHANGE USER_ID HERE
-const USER_ID = '626d79f97f0620763077b9db';
+const USER_ID = Cypress.env('USER_ID');
 
 function generateUrl(apiKey, apiToken) {
   return `${URL_MEMBER}/me/boards?key=${apiKey}&token=${apiToken}`;
@@ -16,7 +15,7 @@ function validateFailedResponse(response, expectedStatusCode, expectedMessage) {
 
 describe('Retrieve user Data to validate apiToken and apiKey', () => {
   before(() => {
-    
+
   });
 
   it('Get user data successfully', () => {

@@ -22,5 +22,8 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
   config.env.API_KEY = process.env.API_KEY;
   config.env.API_TOKEN = process.env.API_TOKEN;
+  config.env.CARD_LIST = process.env.CARD_LIST;
+  config.env.USER_ID = process.env.USER_ID;
+  
   return config;
 };
