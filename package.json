@@ -6,7 +6,6 @@
   "scripts": {
     "lint": "eslint cypress/",
     "lint-fix": "eslint cypress/ --fix",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
