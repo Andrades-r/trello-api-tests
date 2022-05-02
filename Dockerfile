@@ -1,12 +1,12 @@
 FROM cypress/browsers:node16.14.2-slim-chrome100-ff99-edge
 
-RUN mkrdir /teste-trello
+RUN mkdir /teste-trello
 
 WORKDIR /teste-trello
 
-COPY ./package.json .
+COPY ./package.json ./
 
-COPY ./cypress.json .
+COPY ./cypress.json ./
 
 COPY ./cypress ./cypress
 
